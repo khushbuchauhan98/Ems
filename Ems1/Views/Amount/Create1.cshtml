@@ -1,0 +1,39 @@
+﻿@*@model leave_management.Models.CheckInVM
+
+@{
+    ViewData["Title"] = "Create1";
+
+}
+
+<h1>Apply Leave</h1>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Create1">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="RequestingEmployeeId" value="@ViewBag.id" />
+           <div>@ViewBag.id 
+</div>
+
+            <div class="form-group">
+                <input type="submit" value="Request Leave" class="btn btn-primary btn-block" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a class="btn btn-secondary btn-block" asp-action="MyLeave">Back to List</a>
+</div>
+
+@section Scripts{
+    <script>
+        $(function () {
+            $(".datepicker").datepicker({
+                dateFomat: "yy-mm-dd"
+            });
+        });
+    </script>
+}*@

@@ -1,0 +1,113 @@
+﻿@*@model IEnumerable<Data.FormModels.EmployeeDataVm>
+
+@{
+    ViewData["Title"] = "Index1";
+
+}
+
+<h1>My Salary</h1>
+
+<p>
+   
+</p>
+<table id="tblData" class="table">
+    <thead>
+        <tr>
+            <th>
+                Employee Name
+            </th>
+            <th>
+                EmaiId
+            </th>
+            <th>
+                Salary
+            </th>
+            <th>
+                Salary date
+            </th>
+
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RequestingEmployee.Firstname) @Html.DisplayFor(modelItem => item.RequestingEmployee.Lastname)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.SalaryAmount)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Salarydate)
+                </td>
+                
+               
+            </tr>
+        }
+    </tbody>
+</table>
+*@
+@model Data.FormModels.EmployeeDataVm
+
+@{
+    ViewData["Title"] = "MyLeave";
+}
+
+<h1>My Salary </h1>
+@*<div class="jumbotron">
+    <div class="card">
+        <ul class="list-group list-group-flush">
+            @foreach (var item in Model.AmountVMs)
+            {
+                <li class="list-group-item">
+                    <h6>@item.SalaryAmount <span class="badge badge-secondary"></span>    </h6>
+                </li>
+            }
+        </ul>
+    </div>
+</div>*@
+
+@*
+<hr />
+<h1>My Leave Records</h1>*@
+<table id="tblData" class="table">
+    <thead>
+        <tr>
+            <th>
+               Employee Name
+            </th>
+            <th>
+               Salary Amount
+            </th>
+            <th>
+                Salary Date
+            </th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.AmountVMs)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RequestingEmployee.Firstname) @Html.DisplayFor(modelItem => item.RequestingEmployee.Lastname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SalaryAmount)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Salarydate)
+                </td>
+              
+
+                
+
+                
+            </tr>
+        }
+    </tbody>
+</table>

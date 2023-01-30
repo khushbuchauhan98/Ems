@@ -1,0 +1,59 @@
+﻿@model Data.FormModels.RegisterViewModel
+@{
+    ViewData["Title"] = "EditUser";
+
+}
+
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Empedit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @*<input type="hidden" asp-for="Id" value="@Model.Id" />*@
+             <input asp-for="Id" class="form-control" />
+            
+            <div class="form-group">
+                <label asp-for="Firstname" class="control-label"></label>
+                <input asp-for="Firstname" class="form-control" />
+                <span asp-validation-for="Firstname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Lastname" class="control-label"></label>
+                <input asp-for="Lastname" class="form-control" />
+                <span asp-validation-for="Lastname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="address" class="control-label"></label>
+                <input asp-for="address" class="form-control" />
+                <span asp-validation-for="address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AadharNumber" class="control-label"></label>
+                <input asp-for="AadharNumber" class="form-control" />
+                <span asp-validation-for="AadharNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateofJoin" class="control-label"></label>
+                <input asp-for="DateofJoin" class="form-control" />
+                <span asp-validation-for="DateofJoin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateofBirth" class="control-label"></label>
+                <input asp-for="DateofBirth" class="form-control" />
+                <span asp-validation-for="DateofBirth" class="text-danger"></span>
+            </div>
+            
+
+            <div class="form-group">
+                <input type="submit" value="Update" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Empindex">Back to List</a>
+</div>
+
